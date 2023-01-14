@@ -33,9 +33,53 @@
    &none &kp B  &kp Y  &kp O  &kp U  &kp SQT       &kp Q     &kp L  &kp D  &kp W  &kp V    &none
    &none &kp C  &kp I  &kp E  &kp A  &kp COMMA     &kp Z     &kp H  &kp T  &kp S  &kp N    &none
    &none &kp G  &kp X  &kp J  &kp K  &kp DOT       &kp MINUS &kp R  &kp M  &kp F  &kp P    &none
-                  &mo 1 &kp TAB &mt LSFT RET   &kp SPACE &kp BSPC &mo 2 
+                  &mo 1 &kp TAB &mt LSFT RET       &kp SPACE &kp BSPC &mo 2 
+//, THMB1      , THMB2             , THMB3      , THMB4      ),
                         >;
                 };
+
+
+/* 
+                num_layer {
+// -----------------------------------------------------------------------------------------
+// | NONE |  ~   |  &   |  *   | '|'  |  =   |       |  +   |  7   |  8   |  9   |tool-/ | NONE |
+// | NONE |  :   |  $   |  %   |  ^   |  ?   |       |  .   |  4   |  5   |  6   |  -    | NONE |
+// | NONE | BSPC |  !   |  @   |  #   | DEL  |       |  0   |  1   |  2   |  3   |  *    | NONE |
+//                      |      |      |      |       |      |      |      |
+                        bindings = <
+   &none &kp TILDE &kp AMPS  &kp STAR   &kp PIPE  &kp EQUAL       &kp PPLS  &kp 7  &kp 8  &kp 9  &kp V    &none
+   &none &kp COLON &kp DLLR  &kp PRCNT  &kp CARET &kp QMARK       &kp DOT   &kp 4  &kp 5  &kp 6  &kp N    &none
+   &none &kp BSPC  &kp EXCL  &kp AT     &kp HASH  &kp DEL         &kp 0     &kp 1  &kp 2  &kp 3  &kp P    &none
+//, _______    , _______           , _______    , THMB3A    ),
+                             &trans     &trans    &trans          &trans    &trans &trans
+                        >;
+                };
+
+
+
+                func_layer {
+// -----------------------------------------------------------------------------------------
+// | NONE |  PSCRN  |  F12  |       |       |       |                  |       |   F7  |   F8  |   F9  |  F12  | NONE |
+// | NONE |LA(PSCRN)|       |       |       |       |                  |       |   F4  |   F5  |   F6  |  F11  | NONE |
+// | NONE |         |       |       |       |       |                  |       |   F1  |   F2  |   F3  |  F10  | NONE |
+//                        |       |       |       |                  |       |       |       |
+                        bindings = <
+ 
+	[_FUNC] = LAYOUT(      // 4
+  KC_PSCR      , KC_F12    , OSM_ALT      , OSM_CTL    , KC_ESC            , KC_NO      , KC_F7    , KC_F8     , KC_F9     , KC_F12
+, LALT(KC_PSCR), _______   , KC_PGUP      , KC_HOME    , KC_NO             , KC_NO      , KC_F4    , KC_F5     , KC_F6     , KC_F11
+, KC_NO        , KC_NO     , KC_PGDN      , KC_END     , KC_NO             , KC_NO      , KC_F1    , KC_F2     , KC_F3     , KC_F10
+                                          , KC_ATAB    , LCTL(KC_V)        , KC_NO      , KC_NO      ),
+
+
+
+
+
+
+
+*/
+
+
 
 
 
@@ -84,5 +128,6 @@ QWERTY */
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
+
         };
 };
