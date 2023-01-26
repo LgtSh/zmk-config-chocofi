@@ -17,6 +17,9 @@
 
 
 #define LC_A &mt LCTRL A
+#define LC_H &mt LCTRL H
+#define LA_E &mt LALT E
+#define LA_T &mt LALT T
 
 
 
@@ -28,13 +31,13 @@
 
                 default_layer {  // layer 1 
 // -----------------------------------------------------------------------------------------
-// | NONE |  B  |  Y  |  O  |  U   |  '  |   |  Q  |  L   |  D  |  W  |  V  | NONE |
-// | NONE |  C  |  I  |  E  | LC_A |  ,  |   |  Z  |  H   |  T  |  S  |  N  | NONE |
-// | NONE |  G  |  X  |  J  |  K   |  .  |   |  -  |  R   |  M  |  F  |  P  | NONE |
-//                    | LWR | TAB  | ENT |   | SPC | BSPC | RSE |
+// | NONE |  B  |  Y  |  O   |  U   |  '  |   |  Q  |  L   |  D   |  W  |  V  | NONE |
+// | NONE |  C  |  I  | LA_E | LC_A |  ,  |   |  Z  | LC_H | LA_T |  S  |  N  | NONE |
+// | NONE |  G  |  X  |  J   |  K   |  .  |   |  -  |  R   |  M   |  F  |  P  | NONE |
+//                    | LWR  | TAB  | ENT |   | SPC | BSPC | RSE  |
                         bindings = <
    &none &kp B  &kp Y  &kp O  &kp U  &kp SQT       &kp Q     &kp L  &kp D  &kp W  &kp V    &none
-   &none &kp C  &kp I  &kp E  LC_A   &kp COMMA     &kp Z     &kp H  &kp T  &kp S  &kp N    &none
+   &none &kp C  &kp I  LA_E   LC_A   &kp COMMA     &kp Z     LC_H   LA_T   &kp S  &kp N    &none
    &none &kp G  &kp X  &kp J  &kp K  &kp DOT       &kp MINUS &kp R  &kp M  &kp F  &kp P    &none
                   &mo 1 &kp TAB &mt LSFT RET       &kp SPACE &kp BSPC &mo 2 
 //, THMB1      , THMB2             , THMB3      , THMB4      ),
