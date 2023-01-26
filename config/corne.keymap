@@ -16,6 +16,9 @@
 // #define THMB4   LT(_SYM, KC_BSPC)
 
 
+#define LC_A &mt LCTRL A
+
+
 
 / {
         keymap {
