@@ -31,7 +31,7 @@
 #define LA_E &mt LALT E
 #define LA_T &mt LALT T
 #define LAY_C &lt MOUSE C
-#define LAY_I &lt FURC I
+#define LAY_I &lt FUNC I
 #define LAY_B &lt TOOLS B
 #define LAY_V &lt TOOLS V
 
@@ -59,7 +59,10 @@
                 };
 
 
-/****** 
+
+
+
+
                 num_layer {
                         label = "NUMS";
                         bindings = <
@@ -151,8 +154,8 @@
 
 
 
-******/
 
+/******
 
 
 
@@ -186,6 +189,7 @@
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
+******/
 
         };
 };
