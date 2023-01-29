@@ -44,7 +44,7 @@
 
 
                 default_layer {  // layer 1 
-                        label = "ENGRAM";
+//                        label = "ENGRAM";
                         bindings = <
 //   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
 &none     LAY_B         &kp Y         &kp O         &kp U        &kp SQT           &kp Q          &kp L         &kp D         &kp W          LAY_V    &none
@@ -64,7 +64,7 @@
 
 
                 num_layer {
-                        label = "NUMS";
+//                        label = "NUMS";
                         bindings = <
 //   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
 &none   &kp TILDE     &kp AMPS      &kp STAR       &kp PIPE     &kp EQUAL          &kp PPLS       &kp 7         &kp 8         &kp 9       &kp FSLH    &none
@@ -81,7 +81,7 @@
 
 
                 func_layer {
-                        label = "FUNC";
+//                        label = "FUNC";
                         bindings = <
 //   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
 &none   &kp PSCRN      &kp F12       &sk LALT     &sk LCTL       &kp ESC            &none         &kp F7        &kp F8        &kp F9        &kp F12    &none
@@ -99,7 +99,7 @@
 
 
                 mouse_layer {
-                        label = "MOUSE";
+//                        label = "MOUSE";
                         bindings = <
 //   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
 &none     &none        &kp INS     &kp LS(INS)      &none        &kp ESC            &none         &none         &none         &none         &none      &none
@@ -117,7 +117,7 @@
 
 
                 sym_layer {
-                        label = "SYM";
+//                        label = "SYM";
                         bindings = <
 //   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
 &none   &sk LSHIFT      &none       &none          &none        &kp QUOT        &sk LS(LCTRL)    &sk LCTRL    &sk LALT    &sk LA(LCTRL)   &sk LSHIFT   &none
@@ -134,7 +134,7 @@
 
 
                 tools_layer {
-                        label = "TOOLS";
+//                        label = "TOOLS";
                         bindings = <
 //   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
 &none   &trans          &none       &none          &none         &none              &none         &none         &none      &kp C_MUTE      &trans     &none
