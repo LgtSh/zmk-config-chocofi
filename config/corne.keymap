@@ -9,6 +9,15 @@
 #include <dt-bindings/zmk/bt.h>
 
 
+// Layer aliases
+#define ENGRAM 0
+#define NUMS 1
+#define FUNC 2
+#define MOUSE 3
+#define SYM 4
+#define TOOLS 5
+
+
 //THUMBS
 // #define THMB1   LT(_NUMS, KC_TAB)
 // #define THMB2   &mt LSFT RET
@@ -16,10 +25,15 @@
 // #define THMB4   LT(_SYM, KC_BSPC)
 
 
+//ENGRAM
 #define LC_A &mt LCTRL A
 #define LC_H &mt LCTRL H
 #define LA_E &mt LALT E
 #define LA_T &mt LALT T
+#define LAY_C &lt MOUSE C
+#define LAY_I &lt FURC I
+#define LAY_B &lt TOOLS B
+#define LAY_V &lt TOOLS V
 
 
 
@@ -30,58 +44,114 @@
 
 
                 default_layer {  // layer 1 
-// -----------------------------------------------------------------------------------------
-// | NONE |  B  |  Y  |  O   |  U   |  '  |   |  Q  |  L   |  D   |  W  |  V  | NONE |
-// | NONE |  C  |  I  | LA_E | LC_A |  ,  |   |  Z  | LC_H | LA_T |  S  |  N  | NONE |
-// | NONE |  G  |  X  |  J   |  K   |  .  |   |  -  |  R   |  M   |  F  |  P  | NONE |
-//                    | LWR  | TAB  | ENT |   | SPC | BSPC | RSE  |
+                        label = "ENGRAM";
                         bindings = <
-   &none &kp B  &kp Y  &kp O  &kp U  &kp SQT       &kp Q     &kp L  &kp D  &kp W  &kp V    &none
-   &none &kp C  &kp I  LA_E   LC_A   &kp COMMA     &kp Z     LC_H   LA_T   &kp S  &kp N    &none
-   &none &kp G  &kp X  &kp J  &kp K  &kp DOT       &kp MINUS &kp R  &kp M  &kp F  &kp P    &none
-                  &mo 1 &kp TAB &mt LSFT RET       &kp SPACE &kp BSPC &mo 2 
-//, THMB1      , THMB2             , THMB3      , THMB4      ),
+//   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+&none     LAY_B         &kp Y         &kp O         &kp U        &kp SQT           &kp Q          &kp L         &kp D         &kp W          LAY_V    &none
+//   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+&none     LAY_C         LAY_I          LA_E         LC_A        &kp COMMA          &kp Z          LC_H           LA_T         &kp S          &kp N    &none
+//   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+&none     &kp G         &kp X         &kp J         &kp K        &kp DOT         &kp MINUS        &kp R         &kp M         &kp F          &kp P    &none
+//   ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                      &none     &lt NUMS TAB   &mt LSFT RET    &lt NUMS SPACE  &lt SYM BSPC     &none 
+//                               ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
 
 
-/* 
+/****** 
                 num_layer {
-// -----------------------------------------------------------------------------------------
-// | NONE |  ~   |  &   |  *   | '|'  |  =   |       |  +   |  7   |  8   |  9   |tool-/ | NONE |
-// | NONE |  :   |  $   |  %   |  ^   |  ?   |       |  .   |  4   |  5   |  6   |  -    | NONE |
-// | NONE | BSPC |  !   |  @   |  #   | DEL  |       |  0   |  1   |  2   |  3   |  *    | NONE |
-//                      |      |      |      |       |      |      |      |
+                        label = "NUMS";
                         bindings = <
-   &none &kp TILDE &kp AMPS  &kp STAR   &kp PIPE  &kp EQUAL       &kp PPLS  &kp 7  &kp 8  &kp 9  &kp V    &none
-   &none &kp COLON &kp DLLR  &kp PRCNT  &kp CARET &kp QMARK       &kp DOT   &kp 4  &kp 5  &kp 6  &kp N    &none
-   &none &kp BSPC  &kp EXCL  &kp AT     &kp HASH  &kp DEL         &kp 0     &kp 1  &kp 2  &kp 3  &kp P    &none
-//, _______    , _______           , _______    , THMB3A    ),
-                             &trans     &trans    &trans          &trans    &trans &trans
+//   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+&none   &kp TILDE     &kp AMPS      &kp STAR       &kp PIPE     &kp EQUAL          &kp PPLS       &kp 7         &kp 8         &kp 9       &kp FSLH    &none
+//   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+&none   &kp COLON     &kp DLLR      &kp PRCNT     &kp CARET     &kp QMARK          &kp DOT        &kp 4         &kp 5         &kp 6       &kp MINUS   &none
+//   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+&none   &kp BSPC       &kp EXCL      &kp AT       &kp HASH        &kp DEL            &kp 0        &kp 1         &kp 2         &kp 3       &kp STAR    &none
+//   ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                      &trans        &trans        &trans           &trans      &mo SYM RET     &trans
+//                               ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
 
 
 
                 func_layer {
-// -----------------------------------------------------------------------------------------
-// | NONE |  PSCRN  |  F12  |  ALT  |  CTL  |  ESC  |                  |       |   F7  |   F8  |   F9  |  F12  | NONE |
-// | NONE |LA(PSCRN)|       |  PGUP |  HOME |       |                  |       |   F4  |   F5  |   F6  |  F11  | NONE |
-// | NONE |         |       |  PGDN |       |       |                  |       |   F1  |   F2  |   F3  |  F10  | NONE |
-//                          |       |       |       |                  |       |       |       |
+                        label = "FUNC";
                         bindings = <
-    &none &kp PSCRN     &kp F12   &sk LALT   &sk LCTL    &kp ESC       &none   &kp F7  &kp F8  &kp F9  &kp F12    &none
-    &none &kp LA(PSCRN) &trans    &kp PGUP   &kp HOME    &none         &none   &kp F4  &kp F5  &kp F6  &kp F11    &none
-    &none &none         &none     &kp PGDN   &kp END     &none         &none   &kp F1  &kp F2  &kp F3  &kp F10    &none
-                                  &mo 2      &kp LA(TAB) &kp LC(V)
-	[_FUNC] = LAYOUT(      // 4
-  KC_PSCR      , KC_F12    , OSM_ALT      , OSM_CTL    , KC_ESC            , KC_NO      , KC_F7    , KC_F8     , KC_F9     , KC_F12
-, LALT(KC_PSCR), _______   , KC_PGUP      , KC_HOME    , KC_NO             , KC_NO      , KC_F4    , KC_F5     , KC_F6     , KC_F11
-, KC_NO        , KC_NO     , KC_PGDN      , KC_END     , KC_NO             , KC_NO      , KC_F1    , KC_F2     , KC_F3     , KC_F10
-                                          , KC_ATAB    , LCTL(KC_V)        , KC_NO      , KC_NO      ),
+//   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+&none   &kp PSCRN      &kp F12       &sk LALT     &sk LCTL       &kp ESC            &none         &kp F7        &kp F8        &kp F9        &kp F12    &none
+//   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+&none &kp LA(PSCRN)     &trans       &kp PGUP     &kp HOME        &none             &none         &kp F4        &kp F5        &kp F6        &kp F11    &none
+//   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+&none     &none         &none        &kp PGDN     &kp END         &none             &none         &kp F1        &kp F2        &kp F3        &kp F10    &none
+//   ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                      &none      &kp LA(TAB)     &kp LC(V)          &none         &none         &none       
+//                               ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+                        >;
+                };
 
 
-*/
+
+
+                func_layer {
+                        label = "MOUSE";
+                        bindings = <
+//   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+&none     &none        &kp INS     &kp LS(INS)      &none        &kp ESC            &none         &none         &none         &none         &none      &none
+//   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+&none     &trans      &kp LGUI     &kp LC(PGUP) &kp LC(LS(R))     &none             &none         &none         &none         &none         &none      &none
+//   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+&none     &none       &kp CAPS     &kp LC(PGDN) &kp C_AC_BACK     &none             &none         &none         &none         &none         &none      &none
+//   ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
+                                      &none       &kp SPACE       &none             &none         &none         &none       
+//                               ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+                        >;
+                };
+
+
+
+
+                func_layer {
+                        label = "SYM";
+                        bindings = <
+//   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+&none   &sk LSHIFT      &none       &none          &none        &kp QUOT        &sk LS(LCTRL)    &sk LCTRL    &sk LALT    &sk LA(LCTRL)   &sk LSHIFT   &none
+//   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+&none   &kp HOME      &kp PG_DN     &kp PG_UP      &kp END      &kp DQUO             &none       &kp LEFT     &kp DOWN       &kp UP       &kp RIGHT    &none
+//   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+&none    &kp LT        &kp LBRC     &kp LBKT       &kp LPRN      &kp BSLH          &kp FSLH      &kp RPRN      &kp RBKT     &kp RBRC      &kp GT       &none
+//   ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
+                                     &trans        &trans        &kp ESC            &trans        &trans        &trans       
+//                               ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+                        >;
+                };
+
+
+
+                func_layer {
+                        label = "TOOLS";
+                        bindings = <
+//   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+&none   &trans          &none       &none          &none         &none              &none         &none         &none      &kp C_MUTE      &trans     &none
+//   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+&none   &to ENGRAM    &to NUMS      &to QWERTY     &none         &none             &none         &none      &kp C_BRI_UP  &kp C_VOL_UP      &none     &none
+//   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &none         &none      &kp C_BRI_DN  &kp C_VOL_DN      &none     &none
+//   ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
+                                      &none         &none        &kp ESC             &none         &none         &none       
+//                               ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+                        >;
+                };
+
+
+
+
+
+
+
+******/
 
 
 
