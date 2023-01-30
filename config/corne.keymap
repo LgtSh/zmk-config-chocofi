@@ -67,18 +67,18 @@
 //                        label = "NUMS";
                         bindings = <
 //   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-&none   &kp TILDE     &kp AMPS      &kp STAR       &kp PIPE     &kp EQUAL          &kp PPLS       &kp N7         &kp N8         &kp N9       &kp FSLH    &none
+&none   &kp TILDE     &kp AMPS      &kp STAR       &kp PIPE     &kp EQUAL          &kp PLUS       &kp N7        &kp N8       &kp N9       &kp FSLH    &none
 //   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-&none   &kp COLON     &kp DLLR      &kp PRCNT     &kp CARET     &kp QMARK          &kp DOT        &kp N4         &kp N5         &kp N6       &kp MINUS   &none
+&none   &kp COLON     &kp DLLR      &kp PRCNT     &kp CARET     &kp QMARK          &kp DOT        &kp N4        &kp N5       &kp N6       &kp MINUS   &none
 //   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-&none   &kp BSPC       &kp EXCL      &kp AT       &kp HASH        &kp DEL           &kp N0        &kp N1         &kp N2         &kp N3       &kp STAR    &none
+&none   &kp BSPC      &kp EXCL      &kp AT       &kp HASH        &kp DEL           &kp N0        &kp N1        &kp N2        &kp N3       &kp STAR    &none
 //   ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                       &trans        &trans        &trans           &trans      &mo SYM RET     &trans
 //                               ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
 
-/******
+
 
 
                 func_layer {
@@ -158,7 +158,7 @@
 
 
 
-
+/******
 
 
 
