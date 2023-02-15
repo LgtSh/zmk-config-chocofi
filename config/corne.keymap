@@ -9,9 +9,16 @@
 #include <dt-bindings/zmk/bt.h>
 
 
-&mt {
-    tapping-term-ms = <100>;
-};
+        hm: homerow-mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "homehow-mods";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>; 
+            }
 
 
 // Layer aliases
@@ -26,10 +33,10 @@
 
 
 //ENGRAM
-#define LC_A &mt LCTRL A
-#define LC_H &mt LCTRL H
-#define LA_E &mt LALT E
-#define LA_T &mt LALT T
+#define LC_A &hm LCTRL A
+#define LC_H &hm LCTRL H
+#define LA_E &hm LALT E
+#define LA_T &hm LALT T
 #define LAY_C &lt MOUSE C
 #define LAY_I &lt FUNC I
 #define LAY_B &lt TOOLS B
