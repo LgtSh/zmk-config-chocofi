@@ -8,6 +8,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+
+/*
     behaviors {
         hm: homerow-mods {
             compatible = "zmk,behavior-hold-tap";
@@ -20,6 +22,12 @@
             bindings = <&kp>, <&kp>; 
             }
     };
+*/
+
+&mt {
+ tapping-term-ms = <175>;
+ flavor = "tap-preferred";
+};
 
 
 // Layer aliases
@@ -34,10 +42,10 @@
 
 
 //ENGRAM
-#define LC_A &hm LCTRL A
-#define LC_H &hm LCTRL H
-#define LA_E &hm LALT E
-#define LA_T &hm LALT T
+#define LC_A &mt LCTRL A
+#define LC_H &mt LCTRL H
+#define LA_E &mt LALT E
+#define LA_T &mt LALT T
 #define LAY_C &lt MOUSE C
 #define LAY_I &lt FUNC I
 #define LAY_B &lt TOOLS B
