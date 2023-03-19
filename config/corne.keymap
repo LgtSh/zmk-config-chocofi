@@ -57,6 +57,9 @@
 //QWERTY 
 #define LAY_Q &lt TOOLS Q
 #define LAY_P &lt TOOLS P
+#define LC_ESC &mt LCTRL ESC
+#define LS_CAP &mt LSFT &caps_word 
+
 
 
 
@@ -168,7 +171,7 @@
 
 
 
-                default_layer {  // layer 6 
+                qwerty_layer {  // layer 6 
                         label = "QWERTY";
                         bindings = <
 //   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
@@ -178,7 +181,7 @@
 //   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
 &none     &kp Z         &kp X         &kp C         &kp V        &kp B              &kp N         &kp M       &kp COMMA      &kp DOT      &kp FSLH    &none
 //   ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                      &none     &lt NUMS TAB   &mt LSFT RET    &lt NUMS SPACE  &lt SYM BSPC     &none 
+                                      LC_ESC    &lt NUMS TAB   &mt LSFT RET    &lt NUMS SPACE  &lt SYM BSPC     LS_CAP 
 //                               ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
