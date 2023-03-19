@@ -58,7 +58,7 @@
 #define LAY_Q &lt TOOLS Q
 #define LAY_P &lt TOOLS P
 #define LC_ESC &mt LCTRL ESC
-#define LS_CAP &mt LSFT &caps_word 
+#define LS_CAP &mt LSFT caps_word 
 
 
 
