@@ -55,7 +55,7 @@
 #define LAY_I &lt FUNC I
 #define LAY_B &lt TOOLS B
 #define LAY_V &lt TOOLS V
-#define SNIP &kp LSFT(LGUI(S))
+#define SNIP &kp LS(LG(S))
 
 
 //QWERTY 
