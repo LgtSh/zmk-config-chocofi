@@ -55,7 +55,7 @@
 #define LAY_I &lt FUNC I
 #define LAY_B &lt TOOLS B
 #define LAY_V &lt TOOLS V
-
+#define SNIP &kp LS(LGUI(S))
 
 
 //QWERTY 
@@ -128,7 +128,7 @@
                         label = "FUNC";
                         bindings = <
 //   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-&none   &kp PSCRN      &kp F12       &sk LALT     &sk LCTL       &kp ESC            &none         &kp F7        &kp F8        &kp F9        &kp F12    &none
+&none   &kp SNIP       &kp F12       &sk LALT     &sk LCTL       &kp ESC            &none         &kp F7        &kp F8        &kp F9        &kp F12    &none
 //   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
 &none &kp LA(PSCRN)    &trans        &kp PGUP     &kp HOME        &none             &none         &kp F4        &kp F5        &kp F6        &kp F11    &none
 //   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
