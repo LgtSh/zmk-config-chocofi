@@ -158,7 +158,7 @@
                         label = "SYM";
                         bindings = <
 //   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-&none   &sk LSHIFT      &none       &none          &SEMI        &kp QUOT        &sk LS(LCTRL)    &sk LCTRL    &sk LALT    &sk LA(LCTRL)   &sk LSHIFT   &none
+&none   &sk LSHIFT      &none       &none         &kp SEMI      &kp QUOT        &sk LS(LCTRL)    &sk LCTRL    &sk LALT    &sk LA(LCTRL)   &sk LSHIFT   &none
 //   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
 &none   &kp HOME      &kp PG_DN     &kp PG_UP      &kp END      &kp DQT             &none       &kp LEFT     &kp DOWN       &kp UP       &kp RIGHT    &none
 //   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
