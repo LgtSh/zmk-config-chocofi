@@ -55,14 +55,13 @@
 #define LAY_I &lt FUNC I
 #define LAY_B &lt TOOLS B
 #define LAY_V &lt TOOLS V
-#define SNIP &kp LS(LG(S))
+#define SNIP LS(LG(S))
 
 
 //QWERTY 
 #define LAY_Q &lt TOOLS Q
 #define LAY_P &lt TOOLS P
 #define LC_ESC &mt LCTRL ESC
-//#define LS_CAP &mt LSFT &caps_word 
 
 
 
